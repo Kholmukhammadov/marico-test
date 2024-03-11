@@ -1,0 +1,235 @@
+header {
+    position: fixed;
+    background-color: var(--global-palette6);
+    width: 100%;
+    height: fit-content;
+    z-index: 9999;
+}
+.desktop {
+    display: none;
+}
+
+header .container {
+    max-width: 1688px;
+    padding: 45px 24px 12px;
+}
+header .container .header__wrapper {
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+header .container .logo-wrapper a{
+    max-width: 196px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+header .logo-wrapper .company-title {
+    font-weight: 800;
+    line-height: 56px;
+}
+
+header .nav-wrapper {
+    height: 100%;
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .nav-wrapper .close-icon {
+    display: none;
+}
+
+header .nav-wrapper .navigation__menu {
+    height: 100%;
+    flex: 1;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+header .nav-wrapper ul.navigation__menu li {
+    padding: 13px 0px;
+    display: flex;
+}
+
+header .nav-wrapper .navigation__menu a{
+    width: 100%;
+    height: 100%;
+}
+
+.drop-down>a{
+    position: relative;
+}
+
+.drop-down {
+    position: relative;
+}
+
+.drop-down_icon {
+    display: flex;
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    top: calc(50% + 2px);
+    left: calc(100% + 10px);
+    transform: translateY(-50%);
+}
+
+.drop-down:hover .drop-down_icon svg path{
+    fill: var(--primary-color);
+}
+
+.drop-down:hover>a{
+    color: var(--primary-color);
+}
+
+.drop-down:hover .drop-down__menu {
+    max-height: 100vh;
+}
+
+.drop-down__menu {
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    max-height: 0px;
+    overflow: hidden;
+    width: max-content;
+    background-color: var(--global-palette5);
+    transition-duration: 0.5s;
+}
+
+header .nav-wrapper ul.drop-down__menu li {
+    width: 100%;
+    padding: 5px 10px;
+    border-bottom: 1px solid var(--global-palette2);
+}
+
+ul.drop-down__menu li:hover {
+    background-color: var(--global-palette6);
+}
+
+header .btns-wrapper {
+    width: auto;
+    flex-direction: row !important;
+    justify-self: center;
+    gap: 24px;
+}
+
+header .btns-wrapper .btn {
+    padding: 12px 20px;
+}
+
+@media (min-width: 1025px) {
+    .mobile {
+        display: none;
+    }
+    .desktop  {
+        display: block;
+    }
+}
+
+/* Tablet / Mobile header */
+
+header.mobile .container {
+    padding-top: 12px;
+}
+
+header.mobile .burger-btn {
+    display: none;
+    background: transparent;
+    border: none;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+header.mobile .burger-btn:hover svg path {
+    stroke: var(--primary-color)
+}
+
+header.mobile .burger-btn {
+    display: flex;
+}
+
+header.mobile .nav-wrapper{
+    position: fixed;
+    padding: 30px 20px;
+    max-width: 90vw;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--global-palette6);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 30px;
+    top: 0;
+    right: -100%;
+    box-shadow: 0px 30px 50px 0px rgba(100,100,100, 0.498);
+}
+
+header.mobile .nav-wrapper.active {
+    right: 0;
+}
+
+header.mobile .nav-wrapper .close-btn {
+    display: flex;
+    width: 25px;
+    height: 25px;
+    align-self: flex-end;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+header.mobile .nav-wrapper .close-btn:hover svg path{
+    fill: var(--primary-color);
+}
+
+header.mobile .nav-wrapper .navigation__menu {
+    flex-direction: column;
+    flex-grow: 0;
+    gap: 18px;
+    width: 100%;
+}
+
+header.mobile .nav-wrapper .navigation__menu .drop-down {
+    display: flex;
+    flex-direction: column;
+}
+
+header.mobile .nav-wrapper .navigation__menu .drop-down>a {
+    height: auto;
+}
+header.mobile .nav-wrapper .navigation__menu a{
+    padding: 12px 0;
+}
+header.mobile .nav-wrapper .navigation__menu .drop-down>a .drop-down_icon {
+    right: 0px;
+    left: unset;
+}
+
+header.mobile .nav-wrapper .navigation__menu .drop-down__menu {
+    position: relative;
+    top: 0;
+    width: 100%;
+}
+
+header.mobile .nav-wrapper .navigation__menu .drop-down__menu a {
+    padding-left: 12px;
+}
+
+@media (max-width: 767px) {
+    header.mobile .company-title {
+        display: none;
+    }
+}

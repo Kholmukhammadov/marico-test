@@ -1,0 +1,98 @@
+.hero-area .container {
+    max-width: 1688px;
+    padding: 230px 24px 95px;
+}
+
+.hero-area .container .content-wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 135px;
+}
+
+.hero-area .container .content-wrapper h1.gradient-title {
+    margin-top: -8px;
+    background: -webkit-linear-gradient(0deg, #FE6783, #FFBF84);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-area .container .content-wrapper .bottom-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 694px;
+    margin: 0 auto;
+}
+
+.hero-area .bottom-content h4 {
+    font-size: clamp(1.5625rem, 1.375rem + 0.9375vw, 2.5rem);
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+
+.hero-area .bottom-content .btns-wrapper {
+    margin-bottom: 20px;
+}
+
+.hero-area .bottom-content .sub-minor-info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.hero-area .bottom-content .sub-minor-info .circle {
+    width: 29px;
+    height: 29px;
+    background-color: rgba(15, 198, 92, 0.24);
+    border-radius: 50%;
+    position: relative;
+}
+
+.hero-area .bottom-content .sub-minor-info .circle::after {
+    position: absolute;
+    content: '';
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    background-color: var(--global-palette3);
+    transform: translate(-50%, -50%);
+}
+
+.hero-area .bottom-content .sub-minor-info .number {
+    color: var(--global-palette9);
+}
+
+@media (min-width: 1025px) {
+    .hero-area .container .content-wrapper h1.gradient-title {
+        line-height: 119px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero-area .container {
+        padding-top: 130px;
+        padding-bottom: 75px;
+    }
+}
+@media (max-width: 767px) {
+    .hero-area .container {
+        padding-bottom: 50px;
+    }
+    .hero-area .container .content-wrapper {
+        gap: 50px
+    }
+
+    .hero-area .bottom-content .sub-minor-info {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+}

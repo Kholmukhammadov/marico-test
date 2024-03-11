@@ -1,0 +1,40 @@
+
+.we-helped-area {
+    background-image: url('./../img/we-helped.webp');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin: 95px auto;
+}
+.we-helped-area .container {
+    padding: 300px 24px 290px;
+    max-width: 1372px;
+}
+
+.we-helped-area .content-wrapper {
+    text-align: center;
+}
+
+
+.we-helped-area .content-wrapper h2 {
+    font-size: clamp(2.1875rem, 1.6875rem + 2.5vw, 4.6875rem);
+}
+
+@media (max-width: 1024px) {
+    .we-helped-area {
+        margin: 75px auto;
+    }
+    .we-helped-area .container { 
+        padding: 200px 24px 190px;
+    }
+}
+
+@media (max-width: 767px) {
+    .we-helped-area {
+        margin: 50px auto;
+    }
+
+    .we-helped-area .container { 
+        padding: 100px 24px 95px;
+    }
+}

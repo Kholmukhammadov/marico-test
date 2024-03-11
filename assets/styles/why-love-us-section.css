@@ -1,0 +1,84 @@
+.why-love-us-area .container {
+    max-width: 1531px;
+    padding: 95px 24px;
+}
+
+.why-love-us-area .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 160px;
+    text-align: center;
+}
+
+.why-love-us-area .content-wrapper .top-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 64px;
+}
+
+.why-love-us-area .content-wrapper .top-content .reasons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.why-love-us-area .top-content .reasons .heading {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.why-love-us-area .top-content .reasons .heading .emoji {
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+}
+
+.why-love-us-area .bottom-content {
+    max-width: 929px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.why-love-us-area .bottom-content p {
+    margin-top: -9px;
+    margin-bottom: 34px;
+}
+
+.why-love-us-area .bottom-content .btns-wrapper {
+    justify-content: center;
+}
+
+@media (max-width: 1024px) {
+    .why-love-us-area .container {
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
+    .why-love-us-area .content-wrapper {
+        gap: 75px
+    }
+}
+@media (max-width: 950px) {
+    .why-love-us-area .content-wrapper .top-content .reasons {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 767px) {
+    .why-love-us-area .container {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .why-love-us-area .content-wrapper {
+        gap: 50px
+    }
+}
